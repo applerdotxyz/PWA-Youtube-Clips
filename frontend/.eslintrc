@@ -1,0 +1,27 @@
+{
+  "extends": "hardcore-react",
+  "parser": "babel-eslint",
+  "rules": {
+    "linebreak-style": [0, "unix"],
+    "no-debugger": [1],
+    "no-restricted-syntax": [1],
+    "react/jsx-no-bind": [1, {
+      "ignoreRefs": true,
+      "allowArrowFunctions": true,
+      "allowBind": true
+    }],
+    "fp/no-mutation": [0, {
+      "commonjs": true,
+      "allowThis": true,
+      "exceptions": [
+        {"object": "foo", "property": "bar"}
+      ]
+    }]
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "path": true,
+    "ga": true
+  }
+}

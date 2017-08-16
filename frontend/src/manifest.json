@@ -1,0 +1,30 @@
+{
+  "short_name": "Experiment",
+  "name": "My-1st-pwa",
+  "theme_color": "#4A90E2",
+  "background_color": "#F7F8F9",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=launcher"
+}

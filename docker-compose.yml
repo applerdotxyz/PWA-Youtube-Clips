@@ -1,0 +1,10 @@
+frontend:
+  build: ./frontend/.
+  ports:
+    - "8080:8080"
+  volumes:
+    - "./dist:/frontend"
+  command: "npm start"
+  environment:
+    - NODE_ENV=development
+    - LOG_LEVEL=info

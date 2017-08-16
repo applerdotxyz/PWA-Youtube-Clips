@@ -1,0 +1,21 @@
+// app actions
+export const APP_DATA_CALL_START = 'APP_DATA_CALL_START';
+export const APP_DATA_CALL_DONE = 'APP_DATA_CALL_DONE';
+
+// menu actions
+export const GET_MENU_FAILURE = 'GET_MENU_FAILURE';
+export const GET_MENU_SUCCESS = 'GET_MENU_SUCCESS';
+
+// auth actions
+export const AUTH_INITIALIZATION_DONE = 'AUTH_INITIALIZATION_DONE';
+export const AUTH_LOGGED_IN_SUCCESS = 'AUTH_LOGGED_IN_SUCCESS';
+export const AUTH_LOGGED_OUT_SUCCESS = 'AUTH_LOGGED_OUT_SUCCESS';
+
+// user actions
+export const USER_LOADED_SUCCESS = 'USER_LOADED_SUCCESS';
+export const USER_CREATED_SUCCESS = 'USER_CREATED_SUCCESS';
+export const DO_USER_LOGIN = 'DO_USER_LOGIN';
+
+// youtuber videos
+export const GET_VIDEOS_SUCCESS = 'GET_VIDEOS_SUCCESS';
+export const GET_VIDEOS_FAILURE = 'GET_VIDEOS_FAILURE';
