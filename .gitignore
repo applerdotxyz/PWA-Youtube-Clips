@@ -1,9 +1,8 @@
 frontend/node_modules/
 frontend/.env
 frontend/src/config.js
+frontend/src/config/index.js
 frontend/.DS_Store
-/frontend/node_modules/
-/frontend/functions/node_modules
 
 *.log
 .DS_Store

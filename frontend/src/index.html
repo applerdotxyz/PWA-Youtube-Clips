@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg">
     <!-- Add manifest -->
@@ -14,51 +12,38 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Make sure theme-color is defined -->
     <meta name="theme-color" content="#536878">
-
-
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Boilerplate</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
-  <a href="#" id="dntrigger">Trigger</a>
   <script type="text/javascript">
   var notify;
 
     Notification.requestPermission().then(function(p) {
       if(p==='denied'){
-        alert('You have Denied Notifications.');
+        console.log('You have Denied Notifications.');
       }else if(p==='granted'){
-         alert('You have granted Notifications.');
-         notify =  new Notification('Joker Says',{
-          body:'This is auto generated message',
-          icon: 'http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg',
+         console.log('You have granted Notifications.');
+         notify =  new Notification('Welcome to Clipper',{
+          body:'lorem ipsum lorem ipsum',
+          icon: '/assets/2581-192x192.jpg',
           tag: 'Notification'
         });
-
-
       }
 });
 
-
-     var dntrigger = document.getElementById('dntrigger');
-    //simulate event
-    dntrigger.addEventListener('click', function(e){
-      
-      e.preventDefault();
-      if(Notification.permission==='default'){
-        alert('please allow Notifications');
-      }else{
-        notify = new Notification('Joker Says',{
-          body: 'HA HA HA Ha',
-          icon: 'http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg',
-          tag: 'Notification'
-        });
-        setTimeout(notify.close.bind(notify), 4000);
-      }
-    });
+if(Notification.permission==='default'){
+  alert('please allow Notifications');
+} else {
+  notify = new Notification('Joker Says',{
+    body: 'HA HA HA Ha',
+    icon: 'http://www.gorillatshirts.co.uk//image/cache/data/template01/black/2581-192x192.jpg',
+    tag: 'Notification'
+  });
+  setTimeout(notify.close.bind(notify), 4000);
+}
 
   </script>
   <script type="addtohomescreen.js"></script>
@@ -92,13 +77,15 @@
     
     var newWorker = registration.installing;
     
-    // statechange fires every time the ServiceWorker.state changes
-    newWorker.onstatechange = function() {
-      // show the message on activation
-      if (newWorker.state == 'activated' && !navigator.serviceWorker.controller) {
-        document.querySelector(".offline-ready").classList.add("active");
-      }
-    };
+    if(document.querySelector(".offline-ready") && newWorker.onstatechange){
+      // statechange fires every time the ServiceWorker.state changes
+      newWorker.onstatechange = function() {
+        // show the message on activation
+        if (newWorker.state == 'activated' && !navigator.serviceWorker.controller) {
+          document.querySelector(".offline-ready").classList.add("active");
+        }
+      };
+    }
   }).catch(function(err) {
     // registration failed :(
     console.log('ServiceWorker registration failed: ', err);

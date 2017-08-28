@@ -16,7 +16,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentHamburger from 'material-ui/svg-icons/navigation/menu';
 import routes from './routes';
-import { google } from '../config';
+import { google } from '../config/index';
 import * as types from '../state-management/actions/actionTypes';
 
 const muiTheme = getMuiTheme({

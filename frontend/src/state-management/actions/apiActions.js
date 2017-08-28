@@ -2,7 +2,7 @@
 import superagent from 'superagent';
 import * as types from './actionTypes';
 import { appDataCallStart, appDataCallDone } from './appActions';
-import { ytConfig } from '../../config';
+import { ytConfig } from '../../config/index.js';
 const API_KEY = ytConfig.API_KEY;
 
 export const getVideosSuccess = (data) => ({
