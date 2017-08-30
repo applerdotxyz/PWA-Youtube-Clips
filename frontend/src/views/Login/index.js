@@ -1,4 +1,4 @@
-import toastr from 'toastr';
+
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -36,9 +36,9 @@ export class RegistrationPage extends Component {
     this.setState({ saving: true });
 
     this.props.actions.auth.signInWithEmailAndPassword(this.state.user).
-      then(() => toastr.success('You are logged in')).
+      then(() => alert('You are logged in')).
       catch((error) => {
-        toastr.error(error.message);
+        alert(error.message);
         this.setState({ saving: false });
       });
   }

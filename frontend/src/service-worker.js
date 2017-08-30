@@ -6,8 +6,9 @@ const CURRENT_CACHES = {
 self.addEventListener('install', (event) => {
   const urlsToPrefetch = [
     './',
-    'index.html',
-    'client.js',
+    '/',
+    'main.*.js',
+    'main.*.css',
     'icon.jpg',
     'views/App.js',
     'views/Layout.js',

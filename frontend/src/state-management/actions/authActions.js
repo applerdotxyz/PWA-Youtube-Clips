@@ -1,4 +1,4 @@
-import toastr from 'toastr';
+
 import * as daoLayer from '../api/firebase';
 import * as types from './actionTypes';
 import { userLoadedSuccess, userCreated } from './userActions';
@@ -17,7 +17,7 @@ const redirect = (replace, pathname, nextPathName, error = false) => {
     state: { nextPathname: nextPathName },
   });
   if (error) {
-    toastr.error(error);
+    alert(error);
   }
 };
 
@@ -71,10 +71,10 @@ export const signInWithEmailAndPassword = (user__) => (dispatch) => daoLayer.sig
 export const signOut = () => (dispatch, getState, /* getFirebase */) => daoLayer.authSignOut().
       then(() => {
         dispatch(authLoggedOutSuccess());
-        if (getState().routesPermissions.requireAuth.
-              filter((route) => route === getState().routing.locationBeforeTransitions.pathname).toString()) {
-              // dispatch(push(getState().routing.locationBeforeTransitions.pathname));
-        }
+        // if (getState().routesPermissions.requireAuth.
+        //       filter((route) => route === getState().routing.locationBeforeTransitions.pathname).toString()) {
+        //       // dispatch(push(getState().routing.locationBeforeTransitions.pathname));
+        // }
       }).catch((error) => {
         // @TODO better error handling
         throw (error);
