@@ -45,8 +45,8 @@
     "lint": "eslint ./src",
     "client": "./node_modules/.bin/webpack-dev-server --progress --host=localhost --hot --config=./webpack.dev.config.js",
     "posttest": "npm run lint",
-    "serve:dev": "./node_modules/.bin/webpack-dev-server  --hot --host localhost --port 8080 --env dev",
-    "serve:dist": "./node_modules/.bin/webpack-dev-server  --host localhost --port 8080  --config=./webpack.dist.config.js",
+    "serve:dev": "./node_modules/.bin/webpack-dev-server  --compress --hot --host localhost --port 8080 --env dev",
+    "serve:dist": "./node_modules/.bin/webpack-dev-server --compress --host localhost --port 8080  --config=./webpack.dist.config.js",
     "serve:distx": "./node_modules/.bin/webpack-dev-server  --env dist -p --progress --content-base=dist/ --config=./webpack.dev.config.js",
     "start": "npm run serve:dev"
   },
