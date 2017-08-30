@@ -1,5 +1,5 @@
 import MaterialTooltip from 'material-ui/internal/Tooltip';
-import { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class Tooltip extends Component {
   constructor(props) {

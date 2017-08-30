@@ -1,6 +1,6 @@
 /* eslint no-invalid-this: "error"*/
 /* eslint-env es6*/
-import { PropTypes, Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import toastr from 'toastr';
 

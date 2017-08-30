@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Component, PropTypes } from 'react';
 import SelectField from 'material-ui/SelectField';
 import '../../assets/commonStyles/index.css';
