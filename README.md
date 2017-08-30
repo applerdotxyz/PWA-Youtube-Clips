@@ -22,13 +22,26 @@ A Starter Kit (yet Another) which gives you Node and React+Redux Capabilities wi
 - `Webpack 2` as the build tool
 - `Docker` and `docker-compose` to glue the setup up
 
+#### Frontend app dev environment
+- `cd frontend`
+- copy & edit `src/config/index.sample.js`, save as `src/config/index.js`
+- `rm -rf node_modules && yarn`
+- `yarn start`
+
+#### Frontend app dist environment
+- `cd frontend`
+- copy & edit `src/config/index.sample.js`, save as `src/config/index.js`
+- `rm -rf node_modules && yarn`
+- `yarn dist`
+
+
+
 
 #### Frontend app has
 
 - `react` for views
 - `redux` for state management
 - `material-ui` for eye candy (material design)
-- `tcomb-forms` for building forms
 - `firebase` interaction
 - `mocha` and `enzyme` based view layer tests
 - `superagent` to fetch data from `Youtube Data API`
