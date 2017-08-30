@@ -25,21 +25,20 @@ class WebpackDistConfig extends WebpackBaseConfig {
 
   constructor() {
     super();
+
     this.config = {
       cache: false,
       devtool: 'source-map',
-      entry: [
-        './client.js',
-      ],
+      entry: './index.js',
       output: {
         path: root('dist'),
         publicPath: '/',
-        filename: 'assets/app.js',
+        filename: 'assets/dist.js',
         chunkFilename: 'assets/[id].[hash].chunk.js',
       },
       plugins: [
         new webpack.DefinePlugin({
-          'process.env.NODE_ENV': '"production"',
+          'process.env.NODE_ENV': 'dist',
         }),
         new StyleLintPlugin({
           configFile: '.stylelintrc',

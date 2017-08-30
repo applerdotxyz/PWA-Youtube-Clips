@@ -1,5 +1,6 @@
 // application entry point here...
 // modules
+import React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';

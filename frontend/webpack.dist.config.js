@@ -8,8 +8,8 @@ const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 const GLOBALS = {
-  'process.env.NODE_ENV': JSON.stringify('dev'),
-  __DEV__: true,
+  'process.env.NODE_ENV': JSON.stringify('dist'),
+  __DEV__: false,
 };
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/client'),
   target: 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
   output: {
-    path: path.resolve(__dirname, 'dev'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].[chunkhash].js',
   },
@@ -46,9 +46,9 @@ module.exports = {
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
-        minifyJS: false,
-        minifyCSS: false,
-        minifyURLs: false,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
       },
       inject: true,
       // Note that you can add custom options here if you need to handle other custom logic in index.html
@@ -60,7 +60,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 
     new webpack.LoaderOptionsPlugin({
-      minimize: false,
+      minimize: true,
       debug: false,
       noInfo: true, // set to false to see a list of every file being bundled.
       options: {

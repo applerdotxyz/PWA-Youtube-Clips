@@ -1,5 +1,5 @@
 import toastr from 'toastr';
-import { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { user, auth } from '../../state-management/actions';

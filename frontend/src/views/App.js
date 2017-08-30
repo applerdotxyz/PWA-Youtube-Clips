@@ -1,5 +1,5 @@
 
-import { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Router, browserHistory } from 'react-router';
 import GoogleLogin from 'react-google-login';
 import { Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle } from 'material-ui/Toolbar';

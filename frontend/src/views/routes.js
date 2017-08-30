@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import Layout from '../views/Layout';
 import LoginPage from '../views/Login';

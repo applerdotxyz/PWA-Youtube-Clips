@@ -1,9 +1,9 @@
 
-import { Component, PropTypes } from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentDelete from 'material-ui/svg-icons/content/remove';
 import ContentSettings from 'material-ui/svg-icons/action/settings';
 import ContentPermissions from 'material-ui/svg-icons/social/people';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import Tooltip from '../../components/Tooltip';
 // import '../../assets/commonStyles/index.css';

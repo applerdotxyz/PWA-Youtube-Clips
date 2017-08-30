@@ -1,6 +1,6 @@
 
 
-import { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Paper from 'material-ui/Paper';
 import LinearProgress from 'material-ui/LinearProgress';
 import Subheader from 'material-ui/Subheader';
