@@ -31,24 +31,16 @@
     "url": "https://github.com/saurshaz/docker-react-redux-webpack2-starterkit/issues"
   },
   "scripts": {
-    "starts": "node server.js",
-    "testservers": "npm run build && node testserver.js",
-    "builds": "rm -rf dist && cross-env NODE_ENV=production webpack -p && cp -R ./src/config ./dist",
     "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register --require ./test/testHelper.js --recursive ./src/**/*.spec.js",
     "test:unit": "cross-env BABEL_ENV=test mocha --compilers js:babel-register --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
     "test:coverage": "cross-env BABEL_ENV=test nyc --require babel-core/register mocha --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
-    "createLocaleFiles": "./bin/extract_lang.sh",
-    "convertPOtoJson": "./bin/po2json.sh",
     "clean": "./node_modules/.bin/rimraf dist/*",
     "copy": "./node_modules/.bin/copyfiles -f ./src/index.html ./dist && copyfiles -u 1 \"./src/static/**\" ./dist",
     "build": "npm run clean && npm run copy && webpack --progress --bail --env dist -p",
     "lint": "eslint ./src",
-    "client": "./node_modules/.bin/webpack-dev-server --progress --host=localhost --hot --config=./webpack.dev.config.js",
     "posttest": "npm run lint",
-    "serve:dev": "./node_modules/.bin/webpack-dev-server  --compress --hot --host localhost --port 8080 --env dev",
-    "serve:dist": "./node_modules/.bin/webpack-dev-server --compress --host localhost --port 8080  --config=./webpack.dist.config.js",
-    "serve:distx": "./node_modules/.bin/webpack-dev-server  --env dist -p --progress --content-base=dist/ --config=./webpack.dev.config.js",
-    "start": "npm run serve:dev"
+    "dist": "./node_modules/.bin/webpack-dev-server --compress --host localhost --port 8080  --config=./webpack.dist.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server  --compress --hot --host localhost --port 8080 --env dev"
   },
   "dependencies": {
     "autoprefixer": "6.7.3",
