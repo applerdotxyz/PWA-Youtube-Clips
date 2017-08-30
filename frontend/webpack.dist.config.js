@@ -6,6 +6,7 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('dist'),
@@ -58,7 +59,13 @@ module.exports = {
 
     // Minify JS
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|html)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
