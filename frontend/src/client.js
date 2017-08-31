@@ -1,7 +1,7 @@
 // application entry point here...
 // modules
 import React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
@@ -40,7 +40,7 @@ const rootEl = document.getElementById('content');
 
 
 // debugger;
-ReactDOM.render(
+render(
   <Provider store={store}>
     <App
       history={history}

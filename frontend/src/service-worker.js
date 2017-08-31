@@ -16,7 +16,6 @@ self.addEventListener('install', (event) => {
     'views/clips/ClipsListSection.js',
     'views/clips/index.js',
     'views/clips/style.css',
-    'assets/dist.js',
   ];
 
   // All of these logging statements should be visible via the "Inspect" interface
