@@ -1,5 +1,5 @@
 
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { user, auth } from '../../state-management/actions';
@@ -35,12 +35,14 @@ export class RegistrationPage extends Component {
 
     this.setState({ saving: true });
 
+    /* eslint-disable */
     this.props.actions.auth.signInWithEmailAndPassword(this.state.user).
       then(() => alert('You are logged in')).
       catch((error) => {
         alert(error.message);
         this.setState({ saving: false });
       });
+      /* eslint-enable */
   }
 
   render() {

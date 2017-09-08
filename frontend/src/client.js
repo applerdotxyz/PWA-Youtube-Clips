@@ -1,10 +1,8 @@
 // application entry point here...
 // modules
-import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+// import { syncHistoryWithStore } from 'react-router-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { saveState } from './state-management/localStorage';
 
@@ -35,15 +33,13 @@ store.subscribe(() => {
 });
 
 // Create an enhanced history that syncs navigation events with the store
-const history = syncHistoryWithStore(browserHistory, store);
+// const history = syncHistoryWithStore(store);
 const rootEl = document.getElementById('content');
+// history={history}
 
-
-// debugger;
 render(
   <Provider store={store}>
     <App
-      history={history}
       store={store}
     />
   </Provider>,

@@ -32,8 +32,10 @@ module.exports = {
     new webpack.DefinePlugin(GLOBALS),
 
     // Generate an external css file with a hash in the filename
-    new ExtractTextPlugin('[name].[contenthash].css'),
-
+    new ExtractTextPlugin('[name].[hash].css'),
+    new webpack.ProvidePlugin({
+      React: 'react',
+    }),
     // Generate HTML file that contains references to generated bundles. See here for how this works: https://github.com/ampedandwired/html-webpack-plugin#basic-usage
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
@@ -57,7 +59,7 @@ module.exports = {
     }),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    // new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 
     new webpack.LoaderOptionsPlugin({
       minimize: false,

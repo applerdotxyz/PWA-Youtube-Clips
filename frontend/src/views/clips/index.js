@@ -1,5 +1,5 @@
 
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ClipsListSection from './ClipsListSection';
@@ -11,7 +11,10 @@ class Clips extends Component {
 
   render() {
     const { actions, user, videos, params } = this.props;
-    const term = { params };
+
+    console.log(params);
+    const term = { videos };
+
     const body = { section: (
       <div className="layout-column layoutPadding animated fadeInUp">
         <div data-ui-view="pageContent">
@@ -24,7 +27,7 @@ class Clips extends Component {
       body.section = (
         <ClipsListSection
           actions={actions}
-          term={term.params.term || 'films'}
+          term={term || 'music'}
           user={user}
           videos={videos}
         />
